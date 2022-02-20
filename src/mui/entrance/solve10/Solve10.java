@@ -1,0 +1,10 @@
+package mui.entrance.solve10;
+
+public class Solve10 {
+    public static void main(String[] args) {
+        System.out.println();
+    }
+
+
+
+}
