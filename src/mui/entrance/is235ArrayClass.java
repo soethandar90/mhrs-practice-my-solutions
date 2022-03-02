@@ -2,7 +2,7 @@ package mui.entrance;
 
 public class is235ArrayClass {
     public static void main(String[] args) {
-        //int[] a = new int[]{2, 3, 5, 7, 11}; //1
+        int[] a = new int[]{2, 3, 5, 7, 11}; //1
         //int[] a = new int[]{2, 3, 6, 7, 11}; //0
         //int[] a = new int[]{2, 3, 4, 5, 6, 7, 8, 9, 10}; //0
         //int[] a = new int[]{2, 4, 8, 16, 32}; //1
@@ -10,7 +10,7 @@ public class is235ArrayClass {
         //int[] a = new int[]{7, 11, 77, 49}; //1
         //int[] a = new int[]{2}; //1
         //int[] a = new int[]{}; //1
-        int[] a = new int[]{7, 2, 7, 2, 7, 2, 7, 2, 3, 7, 7}; //1
+        //int[] a = new int[]{7, 2, 7, 2, 7, 2, 7, 2, 3, 7, 7}; //1
         is235Array(a);
     }
 
@@ -30,18 +30,18 @@ public class is235ArrayClass {
             if (n % 5 == 0) {
                 divisibleByFive++;
             }
-            if (n % 2 != 0 && n % 3 != 0 && n % 5 != 0){
+            if (n % 2 != 0 && n % 3 != 0 && n % 5 != 0) {
                 nonDivisible++;
             }
         }
-        if(divisibleByTwo+divisibleByThree+divisibleByFive+nonDivisible==a.length){
-            rt=1;
+        if (divisibleByTwo + divisibleByThree + divisibleByFive + nonDivisible == a.length) {
+            rt = 1;
         }
         System.out.println(divisibleByTwo);
         System.out.println(divisibleByThree);
         System.out.println(divisibleByFive);
         System.out.println(nonDivisible);
-        System.out.println("return "+rt);
+        System.out.println("return " + rt);
         return rt;
     }
 }

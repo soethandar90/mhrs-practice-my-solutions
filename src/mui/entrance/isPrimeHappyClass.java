@@ -2,18 +2,17 @@ package mui.entrance;
 
 public class isPrimeHappyClass {
     public static void main(String[] args) {
-        //int n = 5; //1
-        //int n = 25; //1
-        //int n = 32; //1
-        //int n = 8; //0
-        int n = 2; //0
-        isPrimeHappy(n);
+        isPrimeHappy(5);
+        isPrimeHappy(25);
+        isPrimeHappy(32);
+        isPrimeHappy(8);
+        isPrimeHappy(2);
     }
 
     static int isPrimeHappy(int n) {
         int rt = 0;
-        int primeSum = 0;
         if (n > 2) {
+            int primeSum = 0;
             for (int i = 2; i < n; i++) {
                 if (i > 2) {
                     int divisibleCount = 0;
@@ -35,8 +34,6 @@ public class isPrimeHappyClass {
                 rt = 1;
             }
         }
-        System.out.println(rt);
         return rt;
     }
-
 }
