@@ -1,0 +1,25 @@
+int isMadhavArray(int[] a){
+        int rt = 1;
+        int loop = 1;
+        int start = 1;
+        int end = 0;
+        outerloop:
+        while(end!=a.length-1){
+            int sum = 0;
+            end = start + loop;
+            if(end>=a.length){
+                rt=0;
+                break outerloop;
+            }
+            for(int i = start; i<=end; i++){
+                sum +=  a[i];
+            }
+
+            if(a[0]!=sum){
+                rt = 0;
+            }
+            start = end+1;
+            loop++;
+        }
+        return rt;
+    }

@@ -1,0 +1,23 @@
+int henry(int i, int j){
+        return findFactoSum(i)+findFactoSum(j);
+    }
+
+    static int findFactoSum(int k){
+        int n = 0;
+        int num = 2;
+        int sum=0;
+        do{
+            sum=0;
+            for(int i=1;i<=num/2;i++){
+                if(num%i==0){
+                    sum += i;
+                }
+
+            }
+            if(sum==num){
+                n++;
+            }
+            num++;
+        }while(k>n);
+        return sum;
+    }

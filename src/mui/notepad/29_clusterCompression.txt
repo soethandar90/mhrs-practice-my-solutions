@@ -1,0 +1,32 @@
+static int[] clusterCompression(int[] a){
+        int[] result;
+        if(a.length>0){
+          result = new int[]{a[0]};
+            int startIndex = 0;
+            int added=1;
+            while(startIndex<a.length){
+                if(added==0){
+                    int[] temp = new int[result.length+1];
+                    int i=0;
+                    for(int j:result){
+                        temp[i]=j;
+                        i++;
+                    }
+                    temp[result.length]=a[startIndex];
+                    result=temp;
+                }
+
+                if(startIndex<a.length-1 && a[startIndex]==a[startIndex+1] && added==0){
+                    added=1;
+                }
+
+                if(startIndex<a.length-1 && a[startIndex]!=a[startIndex+1]){
+                    added=0;
+                }
+                startIndex++;
+            }
+        }else{
+            result = new int[]{};
+        }
+        return result;
+    }

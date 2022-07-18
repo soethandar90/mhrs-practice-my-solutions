@@ -1,0 +1,33 @@
+int isInertial(int[] a){
+        int rt = 1;
+
+        int max = a[0];
+        for(int i:a){
+            if(i>max){
+                max = i;
+            }
+        }
+
+        if(max%2!=0){
+            return 0;
+        }
+
+        int oddCount=0;
+        for(int i:a){
+            if(i%2!=0){
+                oddCount += 1;
+                for(int j:a){
+                    if(j%2==0 && j!=max &&i<j){
+                        return 0;
+                    }
+                }
+
+            }
+        }
+
+        if(oddCount<1){
+            return 0;
+        }
+
+        return 1;
+    }

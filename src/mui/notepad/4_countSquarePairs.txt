@@ -1,0 +1,21 @@
+int countSquarePairs(int[] a){
+        int spCount=0;
+        int start=0;
+        while(start<a.length){
+            for(int i=start+1; i<a.length;i++){
+                if(a[start]>0 && a[i]>0 && isPerfectSquare(a[start],a[i])){
+                    spCount++;
+                }
+            }
+            start++;
+        }
+        return spCount;
+    }
+
+    private static boolean isPerfectSquare(int x, int y){
+        double sqr = Math.sqrt(x+y);
+        if(Math.floor(sqr)==sqr){
+            return true;
+        }
+        return false;
+    }

@@ -1,0 +1,20 @@
+static int stantonMeasure(int[] a){
+      int lastCount=0;
+        int num = 1;
+        int step = 0;
+        do{
+            step++;
+            num = searchNumCount(a, num);
+           lastCount = num;
+        }while(step<2);
+        return lastCount;
+    }
+    private static int searchNumCount(int[] a,int num) {
+        int count=0;
+        for(int i:a){
+            if(i==num){
+                count++;
+            }
+        }
+        return count;
+    }

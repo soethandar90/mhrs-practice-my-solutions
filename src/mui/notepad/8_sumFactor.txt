@@ -1,0 +1,16 @@
+int sumFactor(int[] a) {
+        int cnt = 0;
+        if (a.length > 0){
+            int sum = 0;
+        for (int i : a) {
+            sum = sum + i;
+        }
+        for (int j : a) {
+            if (j == sum) {
+                cnt++;
+            }
+        }
+    }
+            return cnt;
+
+    }

@@ -1,0 +1,22 @@
+int isSquare(int n){
+int lastSqr = 0;
+int num=1;
+
+if(n>=100){
+n=10;
+}
+
+if(n>=10000){
+n=100;
+}
+
+while(num<n){
+if(num*num==n){
+return 1;
+}
+num++;
+}
+
+return 0;
+
+}

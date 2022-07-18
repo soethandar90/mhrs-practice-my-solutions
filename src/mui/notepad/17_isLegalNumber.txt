@@ -1,0 +1,8 @@
+int isLegalNumber(int[] a, int base){
+        for(int k:a){
+            if(k>=base){
+                return 0;
+            }
+        }
+	return 1;
+    }

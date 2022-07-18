@@ -1,0 +1,23 @@
+static int isIsolated(long n){
+        if(n>2097151 || n<1){
+            return -1;
+        }
+
+        long sqr=n*n;
+        long cube=sqr*n;
+        long tempSqr = sqr;
+        do{
+            long tempCube = cube;
+            do{
+                if(tempCube%10==tempSqr%10){
+                    return 0;
+                }
+                tempCube=tempCube/10;
+            }while(tempCube>1);
+
+            tempSqr=tempSqr/10;
+        }while (tempSqr>1);
+
+        return 1;
+
+    }

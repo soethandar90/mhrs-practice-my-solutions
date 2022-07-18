@@ -1,0 +1,42 @@
+int findPorcupineNumber(int n) {
+        int startNum = n + 10;
+        boolean foundPP = false;
+        boolean firstTime = true;
+
+        if (n % 10 < 9) {
+            startNum = n + (9 - n % 10);
+        }
+        while (!foundPP) {
+            if(firstTime) {
+                while (!isPrime(startNum)) {
+                    startNum += 10;
+                }
+            }
+
+            int nextNum = startNum + 10;
+            if (!isPrime(nextNum)) {
+                startNum = nextNum + 10;
+            } else {
+                for (int i = startNum + 1; i < nextNum; i++) {
+                    if (isPrime(i)) {
+                        startNum = nextNum;
+                        firstTime = false;
+                        break;
+                    }
+                }
+                if(startNum<nextNum){
+                    foundPP = true;
+                }
+            }
+        }
+        return startNum;
+    }
+
+    private static boolean isPrime(int num) {
+        for (int i = 2; i <= num / 2; i++) {
+            if (num % i == 0) {
+                return false;
+            }
+        }
+        return true;
+    }

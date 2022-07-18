@@ -1,0 +1,15 @@
+static int isSumSafe(int[] a){
+int sum=0;
+for(int i:a){
+sum = sum+i;
+}
+
+for(int j=0; j<a.length;j++){
+if(a[j]==sum){
+return 0;
+}
+}
+
+return 1;
+
+}

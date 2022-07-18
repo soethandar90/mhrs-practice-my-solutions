@@ -1,0 +1,36 @@
+int isCentered15(int[] a){
+        int j=0;
+        int midIndex=(a.length/2);
+        int increment = 0;
+        int start = 0;
+        int end = 0;
+
+        int midSum = 0;
+        int rt=0;
+
+        if(a.length%2==0){
+            j = 1;
+        }
+        do{
+            start = midIndex-(j+increment);
+            end = midIndex+increment;
+            midSum = calc(start,end, a);
+            if(midSum==15){
+                rt=1;
+                break;
+            }
+            increment++;
+        }while(midSum<15 && start>0);
+        return rt;
+
+    }
+
+    int calc(int start, int end,int[] a){
+        int sum=0;
+        for(int i=start;i<=end;i++){
+            sum += a[i];
+
+        }
+        return sum;
+
+    }

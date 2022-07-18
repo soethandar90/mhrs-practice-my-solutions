@@ -1,0 +1,21 @@
+int isNUnique(int[] a, int n){
+        int sumCnt=0;
+        int rt=0;
+        for(int i=0;i<a.length-1;i++){
+            int j=i+1;
+            while(j<a.length && sumCnt<2){
+                if(a[i]+a[j]==n){
+                    sumCnt++;
+                }
+                if(sumCnt>1){
+                    return rt;
+                }
+                j++;
+            }
+        }
+        if(sumCnt==1) {
+            rt= 1;
+        }
+        return rt;
+
+    }

@@ -1,0 +1,17 @@
+int guthrieIndex(int n){
+        int rt=0;
+        while(n>1){
+            rt++;
+            n=processNum(n);
+        }
+        return rt;
+    }
+
+    static int processNum(int n){
+        if(n%2==0){
+            n = n/2;
+        }else{
+            n = (n*3)+1;
+        }
+        return n;
+    }

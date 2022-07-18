@@ -1,0 +1,40 @@
+static int isTrivalent(int[] a) {
+        if (a.length > 0) {
+            int[] n = new int[3];
+            int count = 0;
+            for (int i : a) {
+                if (count == 0) {
+                    n[count] = i;
+                    count++;
+                } else {
+                    int tempCnt = 0;
+                    for (int j = 0; j < count; j++) {
+                        if (n[j] == i) {
+                            break;
+                        } else {
+                            tempCnt++;
+                        }
+                    }
+                    if (tempCnt == count) {
+                        if (count < 3) {
+                            n[count] = i;
+                            count++;
+                        } else {
+                            return 0;
+                        }
+
+                    }
+                }
+
+            }
+
+            if (count < 3) {
+                return 0;
+            }
+
+            return 1;
+        } else {
+            return 0;
+        }
+
+    }

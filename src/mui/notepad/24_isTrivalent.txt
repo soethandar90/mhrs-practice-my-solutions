@@ -1,0 +1,25 @@
+static int isTrivalent(int[] a){
+if(a.length<1){
+return 0;
+}
+
+ArrayList<Integer> uniqueNum = new ArrayList<Integer>();
+
+for(int i:a){
+if(uniqueNum.indexOf(i)==-1){
+uniqueNum.add(i);
+}
+
+if(uniqueNum.size()>3){
+return 0;
+}
+
+}
+
+if(uniqueNum.size()<3){
+return 0;
+}
+
+return 1;
+
+}
