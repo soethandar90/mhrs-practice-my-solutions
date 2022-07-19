@@ -1,0 +1,24 @@
+static int isPacked(int[] a){
+        if(a.length>0){
+            int i=0;
+           while(i<a.length){
+                if(a[i]>a.length || a[i]<0){
+                    return 0;
+                }
+                int cnt=0;
+                boolean isConse = true;
+                for(int j=i;j<a.length;j++){
+                    if(a[i]==a[j]){
+                        cnt=cnt+1;
+                    }else{
+                        isConse =false;
+                    }
+                }
+                if(a[i]!=cnt || (a[i]!=cnt && isConse==false)){
+                    return 0;
+                }
+                i=i+cnt;
+            }
+        }
+        return 1;
+    }

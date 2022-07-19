@@ -1,0 +1,22 @@
+static int fullnessQuotient(int n){
+        if(n<0){
+            return -1;
+        }
+        int quoCnt=8;
+        for(int base=2;base<=9;base++){
+            int divider = n;
+            while(divider>=base){
+                if(divider%base==0){
+                    quoCnt=quoCnt-1;
+                    break;
+                }
+                divider = divider/base;
+            }
+        }
+        return quoCnt;
+    }
+
+baseNum =  divider%base; -> 9 x 10 + 0 = 90
+baseNum = 	divider%base; -> 90 x 10 + 1 = 901
+baseNum = divider%base; -> 901 x 10 + 1 = 9011
+
