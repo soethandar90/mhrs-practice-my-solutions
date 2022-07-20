@@ -1,0 +1,20 @@
+static int getExponent(int n, int p){
+        if(p<=1){
+            return -1;
+        }
+        int px=1;
+        int exp=0;
+        int x=0;
+
+        while(px<Math.abs(n)){
+            px = px*p;
+            exp = exp+1;
+            if(n%px==0){
+                x = exp;
+            }
+        }
+        if(x==0){
+            return 0;
+        }
+        return x;
+    }

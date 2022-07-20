@@ -1,7 +1,6 @@
 static int isOddHeavy(int[] a){
         int biggestEven=0;
         int evenCnt=0;
-        int bigOddCnt=0;
         for(int i:a){
             if(i%2==0){
                 evenCnt = evenCnt+1;
@@ -14,12 +13,10 @@ static int isOddHeavy(int[] a){
             return 1;
         }
         for(int j:a){
-            if(j%2!=0 && j>biggestEven){
-                bigOddCnt = bigOddCnt+1;
+            if(j%2!=0 && j<biggestEven){
+                return 0;
             }
         }
-        if(a.length>evenCnt+bigOddCnt){
-            return 0;
-        }
+
         return 1;
     }

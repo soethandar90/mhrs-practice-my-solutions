@@ -1,0 +1,29 @@
+static int[] filterArray(int[] a, int n) {
+        if(n<1){
+            return new int[]{};
+        }
+        int oneCnt = 0;
+        int index = 0;
+        int i = 0;
+        while (n >= 1) {
+            if (n % 2 == 1) {
+                oneCnt = oneCnt + 1;
+                index = (index * 10) + i;
+                if(i>a.length-1){
+                    return null;
+                }
+            }
+            n = n / 2;
+            i = i + 1;
+        }
+
+        int[] rs = new int[oneCnt];
+        for (int j = rs.length - 1; j >= 0; j--) {
+            rs[j] = a[index % 10];
+            index = index / 10;
+        }
+        for (int z : rs) {
+            System.out.println(z);
+        }
+        return rs;
+    }
