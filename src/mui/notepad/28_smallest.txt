@@ -1,0 +1,28 @@
+static int smallest(int n){
+        int result = 0;
+        int i=2;
+        while(result==0){
+            int cnt=0;
+            for(int j=1;j<=n;j++){
+                boolean valid=false;
+                int temp = i*j;
+                while(temp>0){
+                    if(temp%10==2){
+                        valid=true;
+                        cnt++;
+                        break;
+                    }
+                    temp = temp/10;
+                }
+
+                if(!valid){
+                    break;
+                }
+            }
+            if(cnt==n){
+                result=i;
+            }
+            i++;
+        }
+        return result;
+    }

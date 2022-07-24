@@ -1,0 +1,24 @@
+static int isLegalNumber(int[] a, int base) {
+        for (int k : a) {
+            if (k >= base) {
+                return 0;
+            }
+        }
+        return 1;
+    }
+
+    static int convertToBase10(int[ ] a, int base) {
+        if (isLegalNumber(a,base) == 1){
+            int base10 = a[a.length-1];
+        for (int i = a.length-2; i >= 0; i--) {
+            int baseTotal = 1;
+            for (int j = 1; j <= (a.length-1)-i; j++) {
+                baseTotal *= base;
+            }
+            base10 += a[i] * baseTotal;
+        }
+        return base10;
+    }else{
+            return 0;
+        }
+    }
