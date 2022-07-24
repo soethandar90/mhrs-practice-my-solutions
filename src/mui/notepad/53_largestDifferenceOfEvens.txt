@@ -1,0 +1,28 @@
+static int largestDifferenceOfEvens(int[] a) {
+        if (a.length < 2) {
+            return -1;
+        }
+        int largestEven = 0;
+        int smallestEven = 0;
+        int evenCnt = 0;
+        for (int i = 0; i < a.length; i++) {
+            if (a[i] % 2 == 0) {
+                evenCnt++;
+                if (evenCnt == 1) {
+                    largestEven = a[i];
+                    smallestEven = a[i];
+                } else {
+                    if (a[i] > largestEven) {
+                        largestEven = a[i];
+                    }
+                    if (a[i] < smallestEven) {
+                        smallestEven = a[i];
+                    }
+                }
+            }
+        }
+        if (evenCnt < 2) {
+            return -1;
+        }
+        return largestEven - smallestEven;
+    }

@@ -1,0 +1,21 @@
+static int areAnagrams(char[] a1, char[] a2){
+        if(a1.length!=a2.length){
+            return 0;
+        }else{
+            if(a1.length>0){
+                for(char s1:a1){
+                    boolean letterExist = false;
+                    for(char s2:a2){
+                        if(s1==s2){
+                            letterExist = true;
+                            break;
+                        }
+                    }
+                    if(!letterExist){
+                        return 0;
+                    }
+                }
+            }
+        }
+        return 1;
+    }

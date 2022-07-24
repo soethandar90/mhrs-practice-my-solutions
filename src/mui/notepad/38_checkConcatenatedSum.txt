@@ -1,0 +1,21 @@
+static int checkConcatenatedSum(int n, int catlen){
+
+        int tempN=n;
+        int sum=0;
+        while(tempN>0){
+
+            int tempSum=0;
+
+            for(int i=1; i<=catlen;i++){
+                tempSum = (tempSum * 10)+(tempN%10);
+            }
+            sum = sum+tempSum;
+
+            tempN=tempN/10;
+        }
+
+        if(sum!=n){
+            return 0;
+        }
+        return 1;
+    }

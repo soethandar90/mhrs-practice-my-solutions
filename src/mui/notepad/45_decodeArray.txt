@@ -1,0 +1,10 @@
+static int decodeArray(int[] a){
+        int decodedNum = 0;
+        for(int i=0;i<a.length-1;i++){
+            decodedNum = (decodedNum * 10) + Math.abs(a[i]-a[i+1]);
+        }
+        if(a[0]<0){
+            decodedNum = decodedNum * -1;
+        }
+        return decodedNum;
+    }

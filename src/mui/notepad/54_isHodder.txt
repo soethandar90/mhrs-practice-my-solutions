@@ -1,0 +1,23 @@
+static int isHodder(int n){
+if(!isPrime(n)){
+	return 0;
+}
+
+int jtotal=1;
+while(jtotal<n){
+	jtotal *= 2;
+}
+
+if(jtotal-1==n){
+	return 1;
+}
+}
+
+static boolean isPrime(int n){
+	for(int i=2;i<n/2;i++){
+		if(n%2==0){
+			return false;
+		}
+	}
+	return true;
+}

@@ -1,0 +1,44 @@
+static int isSystematicallyIncreasing(int[] a) {
+        //Array validation
+        if (a.length < 1) {
+            return 0;
+        } else {
+            if (a[0] != 1) {
+                return 0;
+            }
+            if (a.length > 1 && a[a.length - 1] == 1) {
+                return 0;
+            }
+        }
+
+        if (a.length > 1) {
+            //Array validation
+            int i = 1;
+            int n = 0;
+            while (i * (i + 1) <= (a.length) * 2) {
+                if (i * (i + 1) == (a.length) * 2) {
+                    n = i;
+                    break;
+                }
+                i++;
+            }
+
+            if (n == 0) {
+                return 0;
+            }
+
+            //isSystematicallyIncreasing Check
+            int last = 1;
+            int m = 0;
+            while (m < a.length) {
+                for (int j = 1; j <= last; j++) {
+                    if (a[m] != j) {
+                        return 0;
+                    }
+                    m++;
+                }
+                last++;
+            }
+        }
+        return 1;
+    }
