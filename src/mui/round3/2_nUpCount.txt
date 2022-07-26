@@ -1,0 +1,12 @@
+static int nUpCount(int[] a, int n){
+	int sum=0;
+	int upCnt=0;
+	for(int i:a){
+		if(sum<=n && sum+i>n){
+			upCnt++;
+		}
+		sum+=i;
+	}
+	
+	return upCnt;
+}

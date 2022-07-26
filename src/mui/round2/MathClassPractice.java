@@ -1,4 +1,4 @@
-package mui.notepad;
+package mui.round2;
 
 public class MathClassPractice {
     public static void main(String[] args){
