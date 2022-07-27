@@ -19,6 +19,8 @@ public class MathClassPractice {
         //System.out.println("Math.ceil(0)=" + Math.ceil(0));
         System.out.println("Math.ceil(z)=" + Math.ceil(z));
 
+        System.out.println("Math.log10(n)=" + Math.log10(1000));
+
 
     }
 }
