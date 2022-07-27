@@ -1,6 +1,6 @@
 package mhrs.round3;
 
-public class isCentered15Class {
+public class IsCentered15Class {
     public static void main(String[] args) {
         System.out.println(isCentered15(new int[]{3, 2, 10, 4, 1, 6, 9})); //1
         System.out.println(isCentered15(new int[]{2, 10, 4, 1, 6, 9})); //0
