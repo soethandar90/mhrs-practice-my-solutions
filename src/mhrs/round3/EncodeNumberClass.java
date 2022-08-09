@@ -8,9 +8,14 @@ public class EncodeNumberClass {
         encodeNumber(14);
         encodeNumber(24);
         encodeNumber(1200);
+        encodeNumber(1);
+        encodeNumber(-18);
     }
 
     static int[] encodeNumber(int n) {
+        if(n<=1){
+            return null;
+        }
         int[] result = new int[0];
         for (int i = 2; i <= n; i++) {
             if (n % i == 0) {
