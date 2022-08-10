@@ -3,6 +3,16 @@ package mhrs.round3;
 public class MatchPatternClass {
     public static void main(String[] args) {
         System.out.println(matchPattern(new int[]{1, 1, 1, 2, 2, 1, 1, 3}, new int[]{1, 2, 1, 3}));
+        System.out.println(matchPattern(new int[]{1, 1, 1, 1, 1}, new int[]{1}));
+        System.out.println(matchPattern(new int[]{1}, new int[]{1}));
+        System.out.println(matchPattern(new int[]{1, 1, 2, 2, 2, 2}, new int[]{1, 2}));
+        System.out.println(matchPattern(new int[]{1, 2, 3}, new int[]{1, 2}));
+        System.out.println(matchPattern(new int[]{1, 2}, new int[]{1, 2, 3}));
+        System.out.println(matchPattern(new int[]{1, 1, 2, 2, 2, 2, 3}, new int[]{1, 3}));
+        System.out.println(matchPattern(new int[]{1, 1, 1, 1} , new int[]{1, 2} ));
+        System.out.println(matchPattern(new int[]{1, 1, 1, 1, 2, 2, 3, 3} , new int[]{1, 2}));
+        System.out.println(matchPattern(new int[]{1, 1, 10, 4, 4, 3}, new int[]{1, 4, 3}));
+
     }
 
     static int matchPattern(int[] a, int[] pattern) {
@@ -19,6 +29,9 @@ public class MatchPatternClass {
                     start = j;
                     break;
                 }
+            }
+            if(cnt<=i){
+                return 0;
             }
             i++;
         }

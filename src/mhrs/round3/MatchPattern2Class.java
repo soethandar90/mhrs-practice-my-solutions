@@ -3,6 +3,15 @@ package mhrs.round3;
 public class MatchPattern2Class {
     public static void main(String[] args) {
         System.out.println(matchPattern(new int[]{1, 1, 1, 2, 2, 1, 1, 3}, new int[]{1, 2, 1, 3}));
+        System.out.println(matchPattern(new int[]{1, 1, 1, 1, 1}, new int[]{1}));
+        System.out.println(matchPattern(new int[]{1}, new int[]{1}));
+        System.out.println(matchPattern(new int[]{1, 1, 2, 2, 2, 2}, new int[]{1, 2}));
+        System.out.println(matchPattern(new int[]{1, 2, 3}, new int[]{1, 2}));
+        System.out.println(matchPattern(new int[]{1, 2}, new int[]{1, 2, 3}));
+        System.out.println(matchPattern(new int[]{1, 1, 2, 2, 2, 2, 3}, new int[]{1, 3}));
+        System.out.println(matchPattern(new int[]{1, 1, 1, 1} , new int[]{1, 2} ));
+        System.out.println(matchPattern(new int[]{1, 1, 1, 1, 2, 2, 3, 3} , new int[]{1, 2}));
+        System.out.println(matchPattern(new int[]{1, 1, 10, 4, 4, 3}, new int[]{1, 4, 3}));
 
     }
 
@@ -21,6 +30,7 @@ public class MatchPattern2Class {
             } else { // advance to next pattern character {
                 // !!You write this code !!
                 k++;
+                i--;
                 matches=0;
             }
         } // end of else
