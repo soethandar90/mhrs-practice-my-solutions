@@ -20,7 +20,7 @@ public class EncodeArrayClass {
         }
         tempN = n;
         int[] result = new int[size];
-        while(tempN>0){ 
+        while(tempN>1){
             int start = result.length-1;
             int end = 0;
            // for(int i=result.length-1;i>0;i--)
