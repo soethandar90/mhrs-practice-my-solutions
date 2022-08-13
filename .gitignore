@@ -2,3 +2,6 @@
 /out/
 /mhrs-practice-my-solutions-latest.iml
 /src/mhrs/round2/Validate.java
+/.git
+.project
+.classpath
